@@ -10,29 +10,25 @@ pipeline{
 		stage('Build'){
 			steps{
 				echo "Build done successfully";
-				chmod +x Build.sh
-				./Build.sh
+				sh "./Build.sh"
 			}
 		}
 		stage('Unit test'){
 			steps{
 				echo "Testing done passed successfully";
-				chmod +x Unit.sh
-				./Unit.sh
+				sh "./Unit.sh"
 			}
 		}
 		stage('Quality'){
 			steps{
 				echo "check done successfully";
-				chmod +x Quality.sh
-				./Quality.sh
+				sh "./Quality.sh"
 			}
 		}
 		stage('Deploy'){
 			steps{
 				echo "Deployment done successfully";
-				chmod +x Deploy.sh
-				./Deploy.sh
+				sh "./Deploy.sh"
 			}
 		}
 	}
